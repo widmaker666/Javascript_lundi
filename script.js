@@ -17,13 +17,56 @@ function openMenu (){
 boutonMenu.addEventListener("click", openMenu); // Avec addEventListener on fait dire qu'il se passe quelque chose lorsqu'on "click", ensuite on appel la function openMenu pour lui dire ce qu'il se passe.
 
 //Bouton EDIT
+const card = document.querySelector('div.col-md-4');
+console.log(card);
+
+const edit = document.getElementById("exemple");
+console.log(edit);
+
+var text = document.querySelector('p.card-text');
+console.log(text);
+//ici la function qui permet de mettre style=red au <p> donc <p style="red">
+function textRed(){
+    text.style.color = 'red'
+console.log(text);
+}
+edit.addEventListener("click", textRed); // Methode quand on clique ça mets le texte en rouge grace à la function.
+
+//Fonction 4
+const edit2 = document.getElementsByClassName('btn btn-sm btn-outline-secondary')[1];
+console.log(edit2);
+
+const text2 = document.getElementsByClassName('card-text')[1];
+console.log(text2);
+
+function textGreen(){
+    
+    if (text2.style.color === ''){
+    
+        text2.style.color = 'green'
+    }
+    else {    
+        text2.style.color = 'black' 
+    } 
+      
+}
+edit2.addEventListener("click", textGreen);
+
+//Fonction 5
+const navbar2 = document.getElementsByClassName('navbar navbar-dark bg-dark box-shadow')[0];
+console.log(navbar2);
+const noBoostrap = document.getElementsByTagName('link')[0];
+console.log(noBoostrap);
+
+function effacer (){
+    if (noBoostrap === noBoostrap){
+        noBoostrap.removeAttribute('href')
+    }
+      else {
+        noBoostrap.getAttribute('href')
+      }
+}
 
 
-
-
-
-
-
-
-
+navbar2.addEventListener('dblclick', effacer);
 
