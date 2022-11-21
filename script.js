@@ -75,3 +75,12 @@ function effacer (){
 
 navbar2.addEventListener('dblclick', effacer)
 
+
+//FONCTION 6
+
+
+
+
+
+
+
