@@ -53,20 +53,25 @@ function textGreen(){
 edit2.addEventListener("click", textGreen);
 
 //Fonction 5
+
 const navbar2 = document.getElementsByClassName('navbar navbar-dark bg-dark box-shadow')[0];
 console.log(navbar2);
-const noBoostrap = document.getElementsByTagName('link')[0];
-console.log(noBoostrap);
+let Boostrap_sans = document.getElementsByTagName('link')[0];
+let Boostrap_link = document.getElementsByTagName('link')[0]['href'];
+
+let boostrap = true
 
 function effacer (){
-    if (noBoostrap === noBoostrap){
-        noBoostrap.removeAttribute('href')
+    if (boostrap == true){
+        Boostrap_sans.href = ''
+        boostrap = false
+        alert("Boostrap c'est de la merde j'enlève")
+    }else{
+        Boostrap_sans = Boostrap_link
+        boostrap = true
+        alert("Y'a plus boostrap je remets ?")
     }
-      else {
-        noBoostrap.getAttribute('href')
-      }
 }
 
-
-navbar2.addEventListener('dblclick', effacer);
+navbar2.addEventListener('dblclick', effacer)
 
